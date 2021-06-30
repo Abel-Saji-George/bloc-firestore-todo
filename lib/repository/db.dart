@@ -24,7 +24,10 @@ class DB {
   }
 
   void updateData(DocumentSnapshot doc) async {
-    await db.collection('CRUD').doc(doc.id).update({'todo': 'please 🤫'});
+    await db
+        .collection('CRUD')
+        .doc(doc.id)
+        .update({'todo': 'SAIIKKEE(╯°□°）╯︵ ┻━┻'});
   }
 
   void deleteData(DocumentSnapshot doc) async {
@@ -32,7 +35,7 @@ class DB {
   }
 
   String randomTodo() {
-    final randomNumber = Random().nextInt(4);
+    final randomNumber = Random().nextInt(5);
     String todo;
     switch (randomNumber) {
       case 1:

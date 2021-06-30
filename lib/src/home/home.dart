@@ -48,6 +48,7 @@ class FirestoreCRUDPageState extends State<FirestoreCRUDPage> {
                 FlatButton(
                   onPressed: () => bloc.deleteData(doc),
                   child: Text('Delete'),
+                  color: Colors.amber,
                 ),
               ],
             )
@@ -80,14 +81,22 @@ class FirestoreCRUDPageState extends State<FirestoreCRUDPage> {
     final bloc = BlocProvider.of<HomeBloc>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Firestore CRUD'),
+        title: Text(
+          '|| Todo App ||',
+          style: TextStyle(color: Colors.amber),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.green[500],
       ),
       body: ListView(
         padding: EdgeInsets.all(8),
         children: <Widget>[
-          Form(
-            key: _formKey,
-            child: buildTextFormField(),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Form(
+              key: _formKey,
+              child: buildTextFormField(),
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
